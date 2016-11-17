@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
@@ -87,7 +88,9 @@ public class ClockView extends ImageView {
             //canvas.scale(1F, v, 0, getMeasuredHeight() / 2);
             mPaint.setColor(0x80000000);
             //canvas.drawCircle(getMeasuredWidth() / 2, getMeasuredHeight() / 2, 100, mPaint);
+            Path path = new Path();
 
+            canvas.clipPath(new Path());
             canvas.restore();
         }
 

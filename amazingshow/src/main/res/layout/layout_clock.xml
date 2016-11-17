@@ -4,7 +4,7 @@
     android:gravity="center"
     android:layout_height="match_parent">
 
-    <cn.lb.amz.widget.ClockView
+    <cn.lb.amz.widget.MagnView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
