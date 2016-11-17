@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="is_support_show_tab">true</bool>
+
+    <integer name="max_user_num">100</integer>
+
+    <string name="test_name">test config name</string>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.lb.widget.OverProgressBar
+        android:id="@+id/opb"
+        android:layout_width="300dp"
+        android:background="#30000000"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        app:thumbSize="30dp"
+        app:thumbColor="@color/colorPrimary"
+        app:progressBackgroundColor="@color/grey"
+        app:progressWidth="8dp"
+        android:visibility="gone"
+        app:progressColor="@color/colorAccent"
+        app:progressBackgroundWidth="4dp"
+        app:reverse="true"
+        app:oritation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:onClick="onClick1"
+            android:text="设置progress" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

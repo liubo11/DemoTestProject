@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.lb.widget.ToggleView
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </com.lb.widget.ToggleView>
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:textSize="24dp"
+        android:padding="10dp"
+        android:text="两个两个两个两个两个两个"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:layout_height="108dp" />
+
+</LinearLayout>

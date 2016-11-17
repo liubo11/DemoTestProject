@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="亮度"
+            android:textColor="#80000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:text="20%"
+            android:textColor="#80000000"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <com.lb.widget.OverProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/ll"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        app:oritation="horizontal"
+        app:progressBackgroundColor="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/progress"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tv1"
+
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/test_selector"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="冷光"
+                android:textColor="@color/test_light_state" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/test_selector"
+                android:padding="4dp"
+                android:text="冷光"
+                android:textColor="@color/test_light_state" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/test_selector"
+                android:padding="4dp"
+                android:text="冷光"
+                android:textColor="@color/test_light_state" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

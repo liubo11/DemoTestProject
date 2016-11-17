@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DemoProject.iml" filepath="$PROJECT_DIR$/DemoProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/amazingshow/amazingshow.iml" filepath="$PROJECT_DIR$/amazingshow/amazingshow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animcircleviewlib/animcircleviewlib.iml" filepath="$PROJECT_DIR$/animcircleviewlib/animcircleviewlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/refresh/refresh.iml" filepath="$PROJECT_DIR$/refresh/refresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screensizetest/screensizetest.iml" filepath="$PROJECT_DIR$/screensizetest/screensizetest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smack/smack.iml" filepath="$PROJECT_DIR$/smack/smack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taskandroidlibrary/taskandroidlibrary.iml" filepath="$PROJECT_DIR$/taskandroidlibrary/taskandroidlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testjavelib/testjavelib.iml" filepath="$PROJECT_DIR$/testjavelib/testjavelib.iml" />
+    </modules>
+  </component>
+</project>

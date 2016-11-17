@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="460dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_herder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_corner_top_white"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="56dp">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="@color/black_de"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="这个是消息内容"
+            android:textColor="@color/black_60"
+            android:textSize="28dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialog_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialog_negative_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_corner_bottom_left_btn"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black_60"
+            android:textSize="32dp" />
+
+        <View
+            android:id="@+id/dialog_btn_space_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_light" />
+
+        <TextView
+            android:id="@+id/dialog_positive_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_corner_bottom_right_btn"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/main_color"
+            android:textSize="32dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

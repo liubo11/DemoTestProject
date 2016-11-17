@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="测试文字"
+        android:textSize="18sp" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <com.lb.widget.LightPanelView
+            android:id="@+id/lightPanel1"
+            android:layout_width="match_parent"
+            android:paddingTop="200dp"
+            android:layout_height="700dp"
+            android:paddingBottom="200dp" />
+
+        <View
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:background="#80FFFFFF" />
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+    <com.lb.widget.LightPanelView
+        android:id="@+id/lightPanel2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone" />
+
+    <com.lb.widget.LightPanelView
+        android:id="@+id/lightPanel3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone" />
+
+    <com.lb.widget.LightPanelView
+        android:id="@+id/lightPanel4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:onClick="onClick1"
+        android:text="随机值"
+        android:visibility="gone" />
+
+</LinearLayout>

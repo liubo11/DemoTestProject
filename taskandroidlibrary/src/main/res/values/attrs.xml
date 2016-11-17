@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="CustomWheelView">
+        <attr name="wheelStyle">
+            <flag name="horizontal" value="0x1"/>
+            <flag name="vertical" value="0x2"/>
+        </attr>
+    </declare-styleable>
+    
+</resources>

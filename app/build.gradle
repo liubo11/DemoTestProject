@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    tasks.whenTaskAdded { task ->
+        if (task.name.contains('AndroidTest')) {
+            task.enabled = false
+        }
+    }
+    defaultConfig {
+        applicationId "com.lb.demoproject"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    variantFilter { variant ->
+        //这里暂时忽略release  测试调试的时候 能不能加速build
+        if (variant.buildType.name == "release") {
+            variant.ignore = true
+            project.logger.error "xxxfff buildTypeName=" + variant.buildType.name
+        }
+    }
+    signingConfigs {
+        debug {
+            //storeFile file("../Keystore/debug.key")
+        }
+        release {
+            storeFile file("../Keystore/Debug_key.jks")
+            storePassword "123456"
+            keyAlias "com.lb.demo"
+            keyPassword "123456"
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        /*myType {
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            minifyEnabled false
+            pseudoLocalesEnabled false
+            zipAlignEnabled false
+        }*/
+    }
+    productFlavors {
+        defaultFlavor {
+            applicationId 'com.lb.demoproject'
+        }
+        flavor_t1 {
+            applicationId 'com.lb.test1'
+            targetSdkVersion 23
+        }
+        flavor_t2 {
+            minSdkVersion 16
+            applicationId 'com.lb.test2'
+            targetSdkVersion 23
+            versionCode 1
+            versionName '1.0'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile project(':taskandroidlibrary')
+    compile 'com.android.support:palette-v7:23.2.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.zhy:percent-support-extends:1.1.1'
+    compile 'com.android.support:design:24.2.0'
+    compile 'me.drakeet.materialdialog:library:1.3.1'
+}
+
+

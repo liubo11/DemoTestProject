@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    compile 'org.igniterealtime.smack:smack-java7:4.1.4'
+    compile 'org.igniterealtime.smack:smack-tcp:4.1.4'
+    compile 'org.igniterealtime.smack:smack-im:4.1.4'
+    compile 'org.jxmpp:jxmpp-core:0.5.0-alpha6'
+    compile 'org.jxmpp:jxmpp-util-cache:0.5.0-alpha6'
+
+    compile "de.measite.minidns:minidns:0.1.7"
+}
+
+tasks.withType(JavaCompile) {    options.encoding = "UTF-8"}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

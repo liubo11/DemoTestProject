@@ -1,0 +1,1 @@
+include ':app', ':taskandroidlibrary', ':animcircleviewlib', ':smack', ':screensizetest', ':testjavelib', ':refresh', ':amazingshow'

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OverProgressBar">
+        <attr name="oritation" format="integer">
+            <flag name="vertical" value="0" />
+            <flag name="horizontal" value="1" />
+        </attr>
+        <attr name="reverse" format="boolean"/>
+
+        <attr name="thumbColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progressBackgroundColor" format="color"/>
+
+        <!--直径-->
+        <attr name="thumbSize" format="dimension"/>
+        <attr name="progressWidth" format="dimension"/>
+        <attr name="progressBackgroundWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="FreeTintView">
+        <attr name="testTint" format="color"/>
+        <attr name="testTintReference" format="reference"/>
+        <attr name="testString" format="string"/>
+
+    </declare-styleable>
+
+</resources>
