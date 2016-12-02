@@ -30,7 +30,7 @@ public class GuideArrowView extends View {
     private int mFirAlpha;
     private int mSecAlpha;
     private void init() {
-        drawable = getResources().getDrawable(R.drawable.ic_arrow_anim);
+        drawable = getResources().getDrawable(R.drawable.ic_arrow_test);
         animator = ValueAnimator.ofFloat(0, 6);
         animator.setDuration(mDuration);
         animator.setRepeatCount(-1);

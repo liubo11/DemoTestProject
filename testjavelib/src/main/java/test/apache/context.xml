@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<httpServer context="/myApp">
+    <handler>
+        <handler-class>test.apache.FirstHandler</handler-class>
+        <url-pattern>/firstHandler</url-pattern>
+    </handler>
+
+
+</httpServer>

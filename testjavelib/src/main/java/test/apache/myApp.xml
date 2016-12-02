@@ -1,0 +1,7 @@
+<pre class="java" name="code"> Headers responseHeaders = httpExchange.getResponseHeaders();
+    responseHeaders.add("location", "http://www.baidu.com");
+    httpExchange.sendResponseHeaders(302, 0);
+    httpExchange.close();
+    OutputStream out = httpExchange.getResponseBody();
+    out.write(result.getBytes());
+    out.flush();

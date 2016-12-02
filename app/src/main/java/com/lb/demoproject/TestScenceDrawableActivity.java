@@ -28,7 +28,11 @@ public class TestScenceDrawableActivity extends BaseActivity {
         setContentView(R.layout.test_scence_drawable);
 
         View v = findViewById(R.id.img);
-        ScenceItemDrawable drawable = new ScenceItemDrawable(barColors[0]);
+        int black = 0xFF000000;
+        int blue = 0xFF0000FF;
+        int[] testColors = {blue, blue,blue,blue, blue, blue,blue,blue, blue, blue,blue,blue, black,blue, blue,blue,blue, blue, blue,blue,blue, blue, blue,blue,blue, black,blue, blue,blue,blue};
+        ScenceItemDrawable drawable = new ScenceItemDrawable(testColors);
+        drawable.setBlackEffectColors(blue);
         drawable.attachView(v);
     }
 

@@ -551,7 +551,7 @@ public class LightPanelView extends View {
         protected boolean mTouchOn;
         protected int downX;
         protected int downY;
-        boolean touch(MotionEvent event) {
+        protected boolean touch(MotionEvent event) {
             if (!(isValid() && attacher.isEnabled())) {
                 mTouchActive = false;
                 mTouchOn = false;

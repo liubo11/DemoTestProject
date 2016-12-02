@@ -2,7 +2,11 @@ package com.lb.java;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.lb.utils.ReflectUtils;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,7 +18,7 @@ import java.util.List;
 
 public class TestJava {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         System.out.println("test start");
 
@@ -31,7 +35,56 @@ public class TestJava {
         System.out.println(Integer.toHexString((~1) & 1));
         System.out.println(Integer.toHexString(~2 & 2));
 
+        /*Integer a = Integer.valueOf(1000); Integer b = Integer.valueOf(1000);
+        Integer c = Integer.valueOf(100); Integer d = Integer.valueOf(100);
+        Integer e = 10; Integer f = 10;
+        System.out.println(a == b);
+        System.out.println(c == d);
+        System.out.println(e == f);
+        print(a);
+        print(b);
+        print(c);
+        print(d);*/
+
+
+
+        System.out.println(formatFloatAccuracy(212123.123456F, 2));
+        System.out.println(formatFloatAccuracy(22.123456F, 4));
+        System.out.println(formatFloatAccuracy(22.123456F, 0));
+        System.out.println(formatFloatAccuracy(22.123456F, 1));
+        System.out.println(formatFloatAccuracy(22.1F, 2));
+        System.out.println(formatFloatAccuracy(22, 2));
+
         System.out.println("test end");
+    }
+
+    public static String formatFloatAccuracy(float value, int decimal){
+        if(decimal < 0 || decimal > 7){
+            throw new IllegalArgumentException("精确位数不能小于0");
+        }
+        StringBuffer buffer = new StringBuffer("##0");
+
+        if(decimal >= 1){
+            buffer.append(".");
+        }
+
+        for(int i = 1; i <= decimal; i++){
+            buffer.append("0");
+        }
+
+        DecimalFormat fnum = new DecimalFormat(buffer.toString());
+
+        return fnum.format(value);
+    }
+
+    private static void print(Object o) {
+        System.out.println(o.hashCode());
+    }
+
+    public static void printArray(List<Integer> list) {
+        for (Integer integer : list) {
+            System.out.println(integer);
+        }
     }
 
     public static void testJson() {JSONObject jsonObject = new JSONObject();
